@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: graphql
+  graphql:
+    graphiql:
+      enabled: true
+
+  datasource:
+    url: jdbc:postgresql://auth-postgres:5432/graphql
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        generate_statistics: true
+        ddl-auto: update
+
+#spring.graphql.graphiql.enabled=true
+#spring.graphql.schema.locations=
+#spring.graphql.schema.file-extensions=ggqls
